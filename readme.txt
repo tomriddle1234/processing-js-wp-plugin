@@ -9,8 +9,26 @@ Stable tag: 1.4.8
 
 Processing.js is the sister project of the popular Processing visual programming language, designed for the web. Processing.js makes your data visualizations, digital art, interactive animations, educational graphs, video games, etc. work using web standards and without any plug-ins. 
 
-This version of the processing.js plugin is a form from original Ramoonus's version https://wordpress.org/plugins/processing-js/ .
+This version of the processing.js plugin is a fork from original Ramoonus's version https://wordpress.org/plugins/processing-js/ .
 In the original plugin the position of the sketch was not right, and not robust to empty lines in the code.
+
+To use this plugin, simply as the example. In the wordpress add post interface, insert:
+
+[processingjs]
+void setup() {
+size(400, 400, JAVA2D);
+smooth();
+stroke(255);
+background(192, 64, 0);
+}
+
+void draw() {
+line(0, 0, mouseX, mouseY);
+}
+
+[/processingjs]
+
+Currently this version of plugin is robust to empty lines, however, please remove all comments in your code, because the comments will cause wordpress alter your final html code in the page.
 
 == Description ==
 Processing.js is the sister project of the popular Processing visual programming language, designed for the web. Processing.js makes your data visualizations, digital art, interactive animations, educational graphs, video games, etc. work using web standards and without any plug-ins. You write code using the Processing language, include it in your web page, and Processing.js does the rest. It's not magic, but almost.
